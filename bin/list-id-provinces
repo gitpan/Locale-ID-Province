@@ -1,0 +1,56 @@
+#!/usr/bin/perl
+
+# workaround for dzil
+package list_id_provinces;
+
+use 5.010;
+use strict;
+use warnings;
+
+use Sub::Spec::CmdLine qw(run);
+
+our $VERSION = '0.01'; # VERSION
+
+run(module => 'Locale::ID::Province', sub=>'list_id_provinces');
+
+1;
+# ABSTRACT: List Indonesian provinces
+
+
+__END__
+=pod
+
+=head1 NAME
+
+list_id_provinces - List Indonesian provinces
+
+=head1 VERSION
+
+version 0.01
+
+=head1 SYNOPSIS
+
+ # List Indonesian provinces
+ $ list-id-provinces --detail
+
+ # Show available options
+ $ list-id-provinces --help
+
+=head1 DESCRIPTION
+
+This is a command-line interface for the <list_id_provinces> function in
+L<Locale::ID::Province>.
+
+=head1 AUTHOR
+
+Steven Haryanto <stevenharyanto@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Steven Haryanto.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

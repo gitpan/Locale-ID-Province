@@ -1,0 +1,293 @@
+NAME
+    Locale::ID::Province - List of provinces in Indonesia
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Locale::ID::Province qw(list_id_provinces);
+     my $res = list_id_provinces();
+
+DESCRIPTION
+    This module provides API access for list of provinces in Indonesia. Data
+    is currently retrieved from the gudang-data-interim repository at
+    https://github.com/sharyanto/gudang-data-interim/tree/master/data/ind_pr
+    ovince/
+
+    This module's functions has Sub::Spec specs.
+
+FUNCTIONS
+    None are exported by default, but they are exportable.
+
+  list_id_provinces(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Field selection arguments ("*" denotes required arguments):
+
+    *   detail => *bool* (default 0)
+
+        Return detailed data (all fields).
+
+    *   fields => *array*
+
+        Select fields to return.
+
+    *   show_field_names => *bool*
+
+        Show field names in result (as hash/assoc).
+
+        When off, will return an array of values without field names
+        (array/list). When on, will return an array of field names and
+        values (hash/associative array).
+
+    Filter arguments:
+
+    *   q => *str*
+
+        Search.
+
+    Filter for bps_code arguments:
+
+    *   bps_code => *int*
+
+        Only return results having certain value of bps_code.
+
+    *   max_bps_code => *int*
+
+        Only return results having a certain maximum value of bps_code.
+
+    *   min_bps_code => *int*
+
+        Only return results having a certain minimum value of bps_code.
+
+    Filter for eng_name arguments:
+
+    *   eng_name => *str*
+
+        Only return results having certain value of eng_name.
+
+    *   eng_name_contain => *str*
+
+        Only return results with eng_name containing certain text.
+
+    *   eng_name_match => *str*
+
+        Only return results with eng_name matching specified regex.
+
+    *   eng_name_not_contain => *str*
+
+        Only return results with eng_name not containing certain text.
+
+    *   eng_name_not_match => *str*
+
+        Only return results with eng_name matching specified regex.
+
+    *   max_eng_name => *str*
+
+        Only return results having a certain maximum value of eng_name.
+
+    *   min_eng_name => *str*
+
+        Only return results having a certain minimum value of eng_name.
+
+    Filter for ind_capital_name arguments:
+
+    *   ind_capital_name => *str*
+
+        Only return results having certain value of ind_capital_name.
+
+    *   ind_capital_name_contain => *str*
+
+        Only return results with ind_capital_name containing certain text.
+
+    *   ind_capital_name_match => *str*
+
+        Only return results with ind_capital_name matching specified regex.
+
+    *   ind_capital_name_not_contain => *str*
+
+        Only return results with ind_capital_name not containing certain
+        text.
+
+    *   ind_capital_name_not_match => *str*
+
+        Only return results with ind_capital_name matching specified regex.
+
+    *   max_ind_capital_name => *str*
+
+        Only return results having a certain maximum value of
+        ind_capital_name.
+
+    *   min_ind_capital_name => *str*
+
+        Only return results having a certain minimum value of
+        ind_capital_name.
+
+    Filter for ind_island_name arguments:
+
+    *   ind_island_name => *str*
+
+        Only return results having certain value of ind_island_name.
+
+    *   ind_island_name_contain => *str*
+
+        Only return results with ind_island_name containing certain text.
+
+    *   ind_island_name_match => *str*
+
+        Only return results with ind_island_name matching specified regex.
+
+    *   ind_island_name_not_contain => *str*
+
+        Only return results with ind_island_name not containing certain
+        text.
+
+    *   ind_island_name_not_match => *str*
+
+        Only return results with ind_island_name matching specified regex.
+
+    *   max_ind_island_name => *str*
+
+        Only return results having a certain maximum value of
+        ind_island_name.
+
+    *   min_ind_island_name => *str*
+
+        Only return results having a certain minimum value of
+        ind_island_name.
+
+    Filter for ind_name arguments:
+
+    *   ind_name => *str*
+
+        Only return results having certain value of ind_name.
+
+    *   ind_name_contain => *str*
+
+        Only return results with ind_name containing certain text.
+
+    *   ind_name_match => *str*
+
+        Only return results with ind_name matching specified regex.
+
+    *   ind_name_not_contain => *str*
+
+        Only return results with ind_name not containing certain text.
+
+    *   ind_name_not_match => *str*
+
+        Only return results with ind_name matching specified regex.
+
+    *   max_ind_name => *str*
+
+        Only return results having a certain maximum value of ind_name.
+
+    *   min_ind_name => *str*
+
+        Only return results having a certain minimum value of ind_name.
+
+    Filter for iso3166_2_code arguments:
+
+    *   iso3166_2_code => *str*
+
+        Only return results having certain value of iso3166_2_code.
+
+    *   iso3166_2_code_contain => *str*
+
+        Only return results with iso3166_2_code containing certain text.
+
+    *   iso3166_2_code_match => *str*
+
+        Only return results with iso3166_2_code matching specified regex.
+
+    *   iso3166_2_code_not_contain => *str*
+
+        Only return results with iso3166_2_code not containing certain text.
+
+    *   iso3166_2_code_not_match => *str*
+
+        Only return results with iso3166_2_code matching specified regex.
+
+    *   max_iso3166_2_code => *str*
+
+        Only return results having a certain maximum value of
+        iso3166_2_code.
+
+    *   min_iso3166_2_code => *str*
+
+        Only return results having a certain minimum value of
+        iso3166_2_code.
+
+    Filter for tags arguments:
+
+    *   max_tags => *str*
+
+        Only return results having a certain maximum value of tags.
+
+    *   min_tags => *str*
+
+        Only return results having a certain minimum value of tags.
+
+    *   tags => *str*
+
+        Only return results having certain value of tags.
+
+    *   tags_contain => *str*
+
+        Only return results with tags containing certain text.
+
+    *   tags_match => *str*
+
+        Only return results with tags matching specified regex.
+
+    *   tags_not_contain => *str*
+
+        Only return results with tags not containing certain text.
+
+    *   tags_not_match => *str*
+
+        Only return results with tags matching specified regex.
+
+    Order arguments:
+
+    *   random => *bool* (default 0)
+
+        If on, return result in random order.
+
+    *   sort => *str*
+
+        Order data according to certain fields.
+
+        A list of field names separated by comma. Each field can be prefixed
+        with '-' to specify descending order instead of the default
+        ascending.
+
+    Paging arguments:
+
+    *   result_limit => *int*
+
+        Only return a certain number of results.
+
+    *   result_start => *int* (default 1)
+
+        Only return results from a certain position.
+
+SEE ALSO
+    list-id-provinces
+
+    Gudang Data Interim project,
+    https://github.com/sharyanto/gudang-data-interim/
+
+    This API will also be available on GudangAPI, http://gudangapi.com/
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
