@@ -2,7 +2,7 @@ NAME
     Locale::ID::Province - List of provinces in Indonesia
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      use Locale::ID::Province qw(list_id_provinces);
@@ -19,261 +19,6 @@ DESCRIPTION
 FUNCTIONS
     None are exported by default, but they are exportable.
 
-  list_id_provinces(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
-    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
-    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
-    error message, RESULT is the actual result.
-
-    Field selection arguments ("*" denotes required arguments):
-
-    *   detail => *bool* (default 0)
-
-        Return detailed data (all fields).
-
-    *   fields => *array*
-
-        Select fields to return.
-
-    *   show_field_names => *bool*
-
-        Show field names in result (as hash/assoc).
-
-        When off, will return an array of values without field names
-        (array/list). When on, will return an array of field names and
-        values (hash/associative array).
-
-    Filter arguments:
-
-    *   q => *str*
-
-        Search.
-
-    Filter for bps_code arguments:
-
-    *   bps_code => *int*
-
-        Only return results having certain value of bps_code.
-
-    *   max_bps_code => *int*
-
-        Only return results having a certain maximum value of bps_code.
-
-    *   min_bps_code => *int*
-
-        Only return results having a certain minimum value of bps_code.
-
-    Filter for eng_name arguments:
-
-    *   eng_name => *str*
-
-        Only return results having certain value of eng_name.
-
-    *   eng_name_contain => *str*
-
-        Only return results with eng_name containing certain text.
-
-    *   eng_name_match => *str*
-
-        Only return results with eng_name matching specified regex.
-
-    *   eng_name_not_contain => *str*
-
-        Only return results with eng_name not containing certain text.
-
-    *   eng_name_not_match => *str*
-
-        Only return results with eng_name matching specified regex.
-
-    *   max_eng_name => *str*
-
-        Only return results having a certain maximum value of eng_name.
-
-    *   min_eng_name => *str*
-
-        Only return results having a certain minimum value of eng_name.
-
-    Filter for ind_capital_name arguments:
-
-    *   ind_capital_name => *str*
-
-        Only return results having certain value of ind_capital_name.
-
-    *   ind_capital_name_contain => *str*
-
-        Only return results with ind_capital_name containing certain text.
-
-    *   ind_capital_name_match => *str*
-
-        Only return results with ind_capital_name matching specified regex.
-
-    *   ind_capital_name_not_contain => *str*
-
-        Only return results with ind_capital_name not containing certain
-        text.
-
-    *   ind_capital_name_not_match => *str*
-
-        Only return results with ind_capital_name matching specified regex.
-
-    *   max_ind_capital_name => *str*
-
-        Only return results having a certain maximum value of
-        ind_capital_name.
-
-    *   min_ind_capital_name => *str*
-
-        Only return results having a certain minimum value of
-        ind_capital_name.
-
-    Filter for ind_island_name arguments:
-
-    *   ind_island_name => *str*
-
-        Only return results having certain value of ind_island_name.
-
-    *   ind_island_name_contain => *str*
-
-        Only return results with ind_island_name containing certain text.
-
-    *   ind_island_name_match => *str*
-
-        Only return results with ind_island_name matching specified regex.
-
-    *   ind_island_name_not_contain => *str*
-
-        Only return results with ind_island_name not containing certain
-        text.
-
-    *   ind_island_name_not_match => *str*
-
-        Only return results with ind_island_name matching specified regex.
-
-    *   max_ind_island_name => *str*
-
-        Only return results having a certain maximum value of
-        ind_island_name.
-
-    *   min_ind_island_name => *str*
-
-        Only return results having a certain minimum value of
-        ind_island_name.
-
-    Filter for ind_name arguments:
-
-    *   ind_name => *str*
-
-        Only return results having certain value of ind_name.
-
-    *   ind_name_contain => *str*
-
-        Only return results with ind_name containing certain text.
-
-    *   ind_name_match => *str*
-
-        Only return results with ind_name matching specified regex.
-
-    *   ind_name_not_contain => *str*
-
-        Only return results with ind_name not containing certain text.
-
-    *   ind_name_not_match => *str*
-
-        Only return results with ind_name matching specified regex.
-
-    *   max_ind_name => *str*
-
-        Only return results having a certain maximum value of ind_name.
-
-    *   min_ind_name => *str*
-
-        Only return results having a certain minimum value of ind_name.
-
-    Filter for iso3166_2_code arguments:
-
-    *   iso3166_2_code => *str*
-
-        Only return results having certain value of iso3166_2_code.
-
-    *   iso3166_2_code_contain => *str*
-
-        Only return results with iso3166_2_code containing certain text.
-
-    *   iso3166_2_code_match => *str*
-
-        Only return results with iso3166_2_code matching specified regex.
-
-    *   iso3166_2_code_not_contain => *str*
-
-        Only return results with iso3166_2_code not containing certain text.
-
-    *   iso3166_2_code_not_match => *str*
-
-        Only return results with iso3166_2_code matching specified regex.
-
-    *   max_iso3166_2_code => *str*
-
-        Only return results having a certain maximum value of
-        iso3166_2_code.
-
-    *   min_iso3166_2_code => *str*
-
-        Only return results having a certain minimum value of
-        iso3166_2_code.
-
-    Filter for tags arguments:
-
-    *   max_tags => *str*
-
-        Only return results having a certain maximum value of tags.
-
-    *   min_tags => *str*
-
-        Only return results having a certain minimum value of tags.
-
-    *   tags => *str*
-
-        Only return results having certain value of tags.
-
-    *   tags_contain => *str*
-
-        Only return results with tags containing certain text.
-
-    *   tags_match => *str*
-
-        Only return results with tags matching specified regex.
-
-    *   tags_not_contain => *str*
-
-        Only return results with tags not containing certain text.
-
-    *   tags_not_match => *str*
-
-        Only return results with tags matching specified regex.
-
-    Order arguments:
-
-    *   random => *bool* (default 0)
-
-        If on, return result in random order.
-
-    *   sort => *str*
-
-        Order data according to certain fields.
-
-        A list of field names separated by comma. Each field can be prefixed
-        with '-' to specify descending order instead of the default
-        ascending.
-
-    Paging arguments:
-
-    *   result_limit => *int*
-
-        Only return a certain number of results.
-
-    *   result_start => *int* (default 1)
-
-        Only return results from a certain position.
-
 SEE ALSO
     list-id-provinces
 
@@ -282,11 +27,335 @@ SEE ALSO
 
     This API will also be available on GudangAPI, http://gudangapi.com/
 
+FUNCTIONS
+  list_id_provinces(%args) -> [status, msg, result, meta]
+    REPLACE ME.
+
+    Arguments ('*' denotes required arguments):
+
+    *   bps_code* => *int*
+
+        Only return records where the 'bps_code' field equals specified
+        value.
+
+    *   bps_code.is* => *int*
+
+        Only return records where the 'bps_code' field equals specified
+        value.
+
+    *   bps_code.max => *int*
+
+        Only return records where the 'bps_code' field is less than or equal
+        to specified value.
+
+    *   bps_code.min => *array*
+
+        Only return records where the 'bps_code' field is greater than or
+        equal to specified value.
+
+    *   bps_code.xmax => *int*
+
+        Only return records where the 'bps_code' field is less than
+        specified value.
+
+    *   bps_code.xmin => *array*
+
+        Only return records where the 'bps_code' field is greater than
+        specified value.
+
+    *   detail => *bool* (default: 0)
+
+        Return array of full records instead of just ID fields.
+
+        By default, only the key (ID) field is returned per result entry.
+
+    *   eng_name* => *str*
+
+        Only return records where the 'eng_name' field equals specified
+        value.
+
+    *   eng_name.contains => *str*
+
+        Only return records where the 'eng_name' field contains specified
+        text.
+
+    *   eng_name.is* => *str*
+
+        Only return records where the 'eng_name' field equals specified
+        value.
+
+    *   eng_name.max => *str*
+
+        Only return records where the 'eng_name' field is less than or equal
+        to specified value.
+
+    *   eng_name.min => *array*
+
+        Only return records where the 'eng_name' field is greater than or
+        equal to specified value.
+
+    *   eng_name.not_contains => *str*
+
+        Only return records where the 'eng_name' field does not contain a
+        certain text.
+
+    *   eng_name.xmax => *str*
+
+        Only return records where the 'eng_name' field is less than
+        specified value.
+
+    *   eng_name.xmin => *array*
+
+        Only return records where the 'eng_name' field is greater than
+        specified value.
+
+    *   fields* => *array*
+
+        Select fields to return.
+
+    *   ind_capital_name* => *str*
+
+        Only return records where the 'ind_capital_name' field equals
+        specified value.
+
+    *   ind_capital_name.contains => *str*
+
+        Only return records where the 'ind_capital_name' field contains
+        specified text.
+
+    *   ind_capital_name.is* => *str*
+
+        Only return records where the 'ind_capital_name' field equals
+        specified value.
+
+    *   ind_capital_name.max => *str*
+
+        Only return records where the 'ind_capital_name' field is less than
+        or equal to specified value.
+
+    *   ind_capital_name.min => *array*
+
+        Only return records where the 'ind_capital_name' field is greater
+        than or equal to specified value.
+
+    *   ind_capital_name.not_contains => *str*
+
+        Only return records where the 'ind_capital_name' field does not
+        contain a certain text.
+
+    *   ind_capital_name.xmax => *str*
+
+        Only return records where the 'ind_capital_name' field is less than
+        specified value.
+
+    *   ind_capital_name.xmin => *array*
+
+        Only return records where the 'ind_capital_name' field is greater
+        than specified value.
+
+    *   ind_island_name* => *str*
+
+        Only return records where the 'ind_island_name' field equals
+        specified value.
+
+    *   ind_island_name.contains => *str*
+
+        Only return records where the 'ind_island_name' field contains
+        specified text.
+
+    *   ind_island_name.is* => *str*
+
+        Only return records where the 'ind_island_name' field equals
+        specified value.
+
+    *   ind_island_name.max => *str*
+
+        Only return records where the 'ind_island_name' field is less than
+        or equal to specified value.
+
+    *   ind_island_name.min => *array*
+
+        Only return records where the 'ind_island_name' field is greater
+        than or equal to specified value.
+
+    *   ind_island_name.not_contains => *str*
+
+        Only return records where the 'ind_island_name' field does not
+        contain a certain text.
+
+    *   ind_island_name.xmax => *str*
+
+        Only return records where the 'ind_island_name' field is less than
+        specified value.
+
+    *   ind_island_name.xmin => *array*
+
+        Only return records where the 'ind_island_name' field is greater
+        than specified value.
+
+    *   ind_name* => *str*
+
+        Only return records where the 'ind_name' field equals specified
+        value.
+
+    *   ind_name.contains => *str*
+
+        Only return records where the 'ind_name' field contains specified
+        text.
+
+    *   ind_name.is* => *str*
+
+        Only return records where the 'ind_name' field equals specified
+        value.
+
+    *   ind_name.max => *str*
+
+        Only return records where the 'ind_name' field is less than or equal
+        to specified value.
+
+    *   ind_name.min => *array*
+
+        Only return records where the 'ind_name' field is greater than or
+        equal to specified value.
+
+    *   ind_name.not_contains => *str*
+
+        Only return records where the 'ind_name' field does not contain a
+        certain text.
+
+    *   ind_name.xmax => *str*
+
+        Only return records where the 'ind_name' field is less than
+        specified value.
+
+    *   ind_name.xmin => *array*
+
+        Only return records where the 'ind_name' field is greater than
+        specified value.
+
+    *   iso3166_2_code* => *str*
+
+        Only return records where the 'iso3166_2_code' field equals
+        specified value.
+
+    *   iso3166_2_code.contains => *str*
+
+        Only return records where the 'iso3166_2_code' field contains
+        specified text.
+
+    *   iso3166_2_code.is* => *str*
+
+        Only return records where the 'iso3166_2_code' field equals
+        specified value.
+
+    *   iso3166_2_code.max => *str*
+
+        Only return records where the 'iso3166_2_code' field is less than or
+        equal to specified value.
+
+    *   iso3166_2_code.min => *array*
+
+        Only return records where the 'iso3166_2_code' field is greater than
+        or equal to specified value.
+
+    *   iso3166_2_code.not_contains => *str*
+
+        Only return records where the 'iso3166_2_code' field does not
+        contain a certain text.
+
+    *   iso3166_2_code.xmax => *str*
+
+        Only return records where the 'iso3166_2_code' field is less than
+        specified value.
+
+    *   iso3166_2_code.xmin => *array*
+
+        Only return records where the 'iso3166_2_code' field is greater than
+        specified value.
+
+    *   q => *str*
+
+        Search.
+
+    *   random => *bool* (default: 0)
+
+        Return records in random order.
+
+    *   result_limit => *int*
+
+        Only return a certain number of records.
+
+    *   result_start => *int* (default: 1)
+
+        Only return starting from the n'th record.
+
+    *   sort => *str*
+
+        Order records according to certain field(s).
+
+        A list of field names separated by comma. Each field can be prefixed
+        with '-' to specify descending order instead of the default
+        ascending.
+
+    *   tags* => *str*
+
+        Only return records where the 'tags' field equals specified value.
+
+    *   tags.contains => *str*
+
+        Only return records where the 'tags' field contains specified text.
+
+    *   tags.is* => *str*
+
+        Only return records where the 'tags' field equals specified value.
+
+    *   tags.max => *str*
+
+        Only return records where the 'tags' field is less than or equal to
+        specified value.
+
+    *   tags.min => *array*
+
+        Only return records where the 'tags' field is greater than or equal
+        to specified value.
+
+    *   tags.not_contains => *str*
+
+        Only return records where the 'tags' field does not contain a
+        certain text.
+
+    *   tags.xmax => *str*
+
+        Only return records where the 'tags' field is less than specified
+        value.
+
+    *   tags.xmin => *array*
+
+        Only return records where the 'tags' field is greater than specified
+        value.
+
+    *   with_field_names => *bool*
+
+        Return field names in each record (as hash/associative array).
+
+        When enabled, function will return each record as hash/associative
+        array (field name => value pairs). Otherwise, function will return
+        each record as list/array (field value, field value, ...).
+
+    Return value:
+
+    Returns an enveloped result (an array). First element (status) is an
+    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
+    function error). Second element (msg) is a string containing error
+    message, or 'OK' if status is 200. Third element (result) is optional,
+    the actual result. Fourth element (meta) is called result metadata and
+    is optional, a hash that contains extra information.
+
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2011 by Steven Haryanto.
+    This software is copyright (c) 2012 by Steven Haryanto.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
