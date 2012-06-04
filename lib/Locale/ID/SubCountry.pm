@@ -1,7 +1,7 @@
 package Locale::ID::SubCountry;
 use Locale::ID::Province;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 our @ISA       = @Locale::ID::Province::ISA;
 our @EXPORT    = @Locale::ID::Province::EXPORT;
@@ -23,7 +23,7 @@ Locale::ID::SubCountry - Alias for Locale::ID::Province
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 FUNCTIONS
 

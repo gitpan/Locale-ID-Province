@@ -2,7 +2,7 @@ NAME
     Locale::ID::Province - List of provinces in Indonesia
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      use Locale::ID::Province qw(list_id_provinces);
