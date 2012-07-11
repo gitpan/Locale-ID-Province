@@ -2,7 +2,7 @@ NAME
     Locale::ID::Province - List of provinces in Indonesia
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
      use Locale::ID::Province qw(list_id_provinces);
@@ -14,7 +14,7 @@ DESCRIPTION
     https://github.com/sharyanto/gudang-data-interim/tree/master/data/ind_pr
     ovince/
 
-    This module's functions has Sub::Spec specs.
+    This module's functions has Rinci specs.
 
 FUNCTIONS
     None are exported by default, but they are exportable.
@@ -27,9 +27,16 @@ SEE ALSO
 
     This API will also be available on GudangAPI, http://gudangapi.com/
 
+DESCRIPTION
+    This module has Rinci metadata.
+
 FUNCTIONS
+    None are exported by default, but they are exportable.
+
   list_id_provinces(%args) -> [status, msg, result, meta]
-    REPLACE ME.
+    Provinces in Indonesia.
+
+    REPLACE ME
 
     Arguments ('*' denotes required arguments):
 

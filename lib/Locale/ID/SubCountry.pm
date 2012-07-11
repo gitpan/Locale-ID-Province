@@ -1,7 +1,7 @@
 package Locale::ID::SubCountry;
 use Locale::ID::Province;
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 our @ISA       = @Locale::ID::Province::ISA;
 our @EXPORT    = @Locale::ID::Province::EXPORT;
@@ -23,14 +23,23 @@ Locale::ID::SubCountry - Alias for Locale::ID::Province
 
 =head1 VERSION
 
-version 0.03
+version 0.04
+
+=head1 DESCRIPTION
+
+
+This module has L<Rinci> metadata.
 
 =head1 FUNCTIONS
 
 
+None are exported by default, but they are exportable.
+
 =head2 list_id_provinces(%args) -> [status, msg, result, meta]
 
-REPLACE ME.
+Provinces in Indonesia.
+
+REPLACE ME
 
 Arguments ('*' denotes required arguments):
 
