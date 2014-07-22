@@ -2,7 +2,8 @@ NAME
     Locale::ID::Province - List of provinces in Indonesia
 
 VERSION
-    version 0.04
+    This document describes version 0.05 of Locale::ID::Province (from Perl
+    distribution Locale-ID-Province), released on 2014-07-22.
 
 SYNOPSIS
      use Locale::ID::Province qw(list_id_provinces);
@@ -19,20 +20,6 @@ DESCRIPTION
 FUNCTIONS
     None are exported by default, but they are exportable.
 
-SEE ALSO
-    list-id-provinces
-
-    Gudang Data Interim project,
-    https://github.com/sharyanto/gudang-data-interim/
-
-    This API will also be available on GudangAPI, http://gudangapi.com/
-
-DESCRIPTION
-    This module has Rinci metadata.
-
-FUNCTIONS
-    None are exported by default, but they are exportable.
-
   list_id_provinces(%args) -> [status, msg, result, meta]
     Provinces in Indonesia.
 
@@ -40,32 +27,47 @@ FUNCTIONS
 
     Arguments ('*' denotes required arguments):
 
-    *   bps_code* => *int*
+    *   bps_code => *int*
 
         Only return records where the 'bps_code' field equals specified
         value.
 
-    *   bps_code.is* => *int*
+    *   bps_code.in => *array*
+
+        Only return records where the 'bps_code' field is in the specified
+        values.
+
+    *   bps_code.is => *int*
 
         Only return records where the 'bps_code' field equals specified
         value.
+
+    *   bps_code.isnt => *int*
+
+        Only return records where the 'bps_code' field does not equal
+        specified value.
 
     *   bps_code.max => *int*
 
         Only return records where the 'bps_code' field is less than or equal
         to specified value.
 
-    *   bps_code.min => *array*
+    *   bps_code.min => *int*
 
         Only return records where the 'bps_code' field is greater than or
         equal to specified value.
+
+    *   bps_code.not_in => *array*
+
+        Only return records where the 'bps_code' field is not in the
+        specified values.
 
     *   bps_code.xmax => *int*
 
         Only return records where the 'bps_code' field is less than
         specified value.
 
-    *   bps_code.xmin => *array*
+    *   bps_code.xmin => *int*
 
         Only return records where the 'bps_code' field is greater than
         specified value.
@@ -76,7 +78,7 @@ FUNCTIONS
 
         By default, only the key (ID) field is returned per result entry.
 
-    *   eng_name* => *str*
+    *   eng_name => *str*
 
         Only return records where the 'eng_name' field equals specified
         value.
@@ -86,41 +88,56 @@ FUNCTIONS
         Only return records where the 'eng_name' field contains specified
         text.
 
-    *   eng_name.is* => *str*
+    *   eng_name.in => *array*
+
+        Only return records where the 'eng_name' field is in the specified
+        values.
+
+    *   eng_name.is => *str*
 
         Only return records where the 'eng_name' field equals specified
         value.
+
+    *   eng_name.isnt => *str*
+
+        Only return records where the 'eng_name' field does not equal
+        specified value.
 
     *   eng_name.max => *str*
 
         Only return records where the 'eng_name' field is less than or equal
         to specified value.
 
-    *   eng_name.min => *array*
+    *   eng_name.min => *str*
 
         Only return records where the 'eng_name' field is greater than or
         equal to specified value.
 
     *   eng_name.not_contains => *str*
 
-        Only return records where the 'eng_name' field does not contain a
-        certain text.
+        Only return records where the 'eng_name' field does not contain
+        specified text.
+
+    *   eng_name.not_in => *array*
+
+        Only return records where the 'eng_name' field is not in the
+        specified values.
 
     *   eng_name.xmax => *str*
 
         Only return records where the 'eng_name' field is less than
         specified value.
 
-    *   eng_name.xmin => *array*
+    *   eng_name.xmin => *str*
 
         Only return records where the 'eng_name' field is greater than
         specified value.
 
-    *   fields* => *array*
+    *   fields => *array*
 
         Select fields to return.
 
-    *   ind_capital_name* => *str*
+    *   ind_capital_name => *str*
 
         Only return records where the 'ind_capital_name' field equals
         specified value.
@@ -130,17 +147,27 @@ FUNCTIONS
         Only return records where the 'ind_capital_name' field contains
         specified text.
 
-    *   ind_capital_name.is* => *str*
+    *   ind_capital_name.in => *array*
+
+        Only return records where the 'ind_capital_name' field is in the
+        specified values.
+
+    *   ind_capital_name.is => *str*
 
         Only return records where the 'ind_capital_name' field equals
         specified value.
+
+    *   ind_capital_name.isnt => *str*
+
+        Only return records where the 'ind_capital_name' field does not
+        equal specified value.
 
     *   ind_capital_name.max => *str*
 
         Only return records where the 'ind_capital_name' field is less than
         or equal to specified value.
 
-    *   ind_capital_name.min => *array*
+    *   ind_capital_name.min => *str*
 
         Only return records where the 'ind_capital_name' field is greater
         than or equal to specified value.
@@ -148,19 +175,24 @@ FUNCTIONS
     *   ind_capital_name.not_contains => *str*
 
         Only return records where the 'ind_capital_name' field does not
-        contain a certain text.
+        contain specified text.
+
+    *   ind_capital_name.not_in => *array*
+
+        Only return records where the 'ind_capital_name' field is not in the
+        specified values.
 
     *   ind_capital_name.xmax => *str*
 
         Only return records where the 'ind_capital_name' field is less than
         specified value.
 
-    *   ind_capital_name.xmin => *array*
+    *   ind_capital_name.xmin => *str*
 
         Only return records where the 'ind_capital_name' field is greater
         than specified value.
 
-    *   ind_island_name* => *str*
+    *   ind_island_name => *str*
 
         Only return records where the 'ind_island_name' field equals
         specified value.
@@ -170,9 +202,19 @@ FUNCTIONS
         Only return records where the 'ind_island_name' field contains
         specified text.
 
-    *   ind_island_name.is* => *str*
+    *   ind_island_name.in => *array*
+
+        Only return records where the 'ind_island_name' field is in the
+        specified values.
+
+    *   ind_island_name.is => *str*
 
         Only return records where the 'ind_island_name' field equals
+        specified value.
+
+    *   ind_island_name.isnt => *str*
+
+        Only return records where the 'ind_island_name' field does not equal
         specified value.
 
     *   ind_island_name.max => *str*
@@ -180,7 +222,7 @@ FUNCTIONS
         Only return records where the 'ind_island_name' field is less than
         or equal to specified value.
 
-    *   ind_island_name.min => *array*
+    *   ind_island_name.min => *str*
 
         Only return records where the 'ind_island_name' field is greater
         than or equal to specified value.
@@ -188,19 +230,24 @@ FUNCTIONS
     *   ind_island_name.not_contains => *str*
 
         Only return records where the 'ind_island_name' field does not
-        contain a certain text.
+        contain specified text.
+
+    *   ind_island_name.not_in => *array*
+
+        Only return records where the 'ind_island_name' field is not in the
+        specified values.
 
     *   ind_island_name.xmax => *str*
 
         Only return records where the 'ind_island_name' field is less than
         specified value.
 
-    *   ind_island_name.xmin => *array*
+    *   ind_island_name.xmin => *str*
 
         Only return records where the 'ind_island_name' field is greater
         than specified value.
 
-    *   ind_name* => *str*
+    *   ind_name => *str*
 
         Only return records where the 'ind_name' field equals specified
         value.
@@ -210,37 +257,52 @@ FUNCTIONS
         Only return records where the 'ind_name' field contains specified
         text.
 
-    *   ind_name.is* => *str*
+    *   ind_name.in => *array*
+
+        Only return records where the 'ind_name' field is in the specified
+        values.
+
+    *   ind_name.is => *str*
 
         Only return records where the 'ind_name' field equals specified
         value.
+
+    *   ind_name.isnt => *str*
+
+        Only return records where the 'ind_name' field does not equal
+        specified value.
 
     *   ind_name.max => *str*
 
         Only return records where the 'ind_name' field is less than or equal
         to specified value.
 
-    *   ind_name.min => *array*
+    *   ind_name.min => *str*
 
         Only return records where the 'ind_name' field is greater than or
         equal to specified value.
 
     *   ind_name.not_contains => *str*
 
-        Only return records where the 'ind_name' field does not contain a
-        certain text.
+        Only return records where the 'ind_name' field does not contain
+        specified text.
+
+    *   ind_name.not_in => *array*
+
+        Only return records where the 'ind_name' field is not in the
+        specified values.
 
     *   ind_name.xmax => *str*
 
         Only return records where the 'ind_name' field is less than
         specified value.
 
-    *   ind_name.xmin => *array*
+    *   ind_name.xmin => *str*
 
         Only return records where the 'ind_name' field is greater than
         specified value.
 
-    *   iso3166_2_code* => *str*
+    *   iso3166_2_code => *str*
 
         Only return records where the 'iso3166_2_code' field equals
         specified value.
@@ -250,9 +312,19 @@ FUNCTIONS
         Only return records where the 'iso3166_2_code' field contains
         specified text.
 
-    *   iso3166_2_code.is* => *str*
+    *   iso3166_2_code.in => *array*
+
+        Only return records where the 'iso3166_2_code' field is in the
+        specified values.
+
+    *   iso3166_2_code.is => *str*
 
         Only return records where the 'iso3166_2_code' field equals
+        specified value.
+
+    *   iso3166_2_code.isnt => *str*
+
+        Only return records where the 'iso3166_2_code' field does not equal
         specified value.
 
     *   iso3166_2_code.max => *str*
@@ -260,7 +332,7 @@ FUNCTIONS
         Only return records where the 'iso3166_2_code' field is less than or
         equal to specified value.
 
-    *   iso3166_2_code.min => *array*
+    *   iso3166_2_code.min => *str*
 
         Only return records where the 'iso3166_2_code' field is greater than
         or equal to specified value.
@@ -268,14 +340,19 @@ FUNCTIONS
     *   iso3166_2_code.not_contains => *str*
 
         Only return records where the 'iso3166_2_code' field does not
-        contain a certain text.
+        contain specified text.
+
+    *   iso3166_2_code.not_in => *array*
+
+        Only return records where the 'iso3166_2_code' field is not in the
+        specified values.
 
     *   iso3166_2_code.xmax => *str*
 
         Only return records where the 'iso3166_2_code' field is less than
         specified value.
 
-    *   iso3166_2_code.xmin => *array*
+    *   iso3166_2_code.xmin => *str*
 
         Only return records where the 'iso3166_2_code' field is greater than
         specified value.
@@ -304,7 +381,7 @@ FUNCTIONS
         with '-' to specify descending order instead of the default
         ascending.
 
-    *   tags* => *str*
+    *   tags => *str*
 
         Only return records where the 'tags' field equals specified value.
 
@@ -312,31 +389,46 @@ FUNCTIONS
 
         Only return records where the 'tags' field contains specified text.
 
-    *   tags.is* => *str*
+    *   tags.in => *array*
+
+        Only return records where the 'tags' field is in the specified
+        values.
+
+    *   tags.is => *str*
 
         Only return records where the 'tags' field equals specified value.
+
+    *   tags.isnt => *str*
+
+        Only return records where the 'tags' field does not equal specified
+        value.
 
     *   tags.max => *str*
 
         Only return records where the 'tags' field is less than or equal to
         specified value.
 
-    *   tags.min => *array*
+    *   tags.min => *str*
 
         Only return records where the 'tags' field is greater than or equal
         to specified value.
 
     *   tags.not_contains => *str*
 
-        Only return records where the 'tags' field does not contain a
-        certain text.
+        Only return records where the 'tags' field does not contain
+        specified text.
+
+    *   tags.not_in => *array*
+
+        Only return records where the 'tags' field is not in the specified
+        values.
 
     *   tags.xmax => *str*
 
         Only return records where the 'tags' field is less than specified
         value.
 
-    *   tags.xmin => *array*
+    *   tags.xmin => *str*
 
         Only return records where the 'tags' field is greater than specified
         value.
@@ -351,18 +443,45 @@ FUNCTIONS
 
     Return value:
 
-    Returns an enveloped result (an array). First element (status) is an
-    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
-    function error). Second element (msg) is a string containing error
-    message, or 'OK' if status is 200. Third element (result) is optional,
-    the actual result. Fourth element (meta) is called result metadata and
-    is optional, a hash that contains extra information.
+    Returns an enveloped result (an array).
+
+    First element (status) is an integer containing HTTP status code (200
+    means OK, 4xx caller error, 5xx function error). Second element (msg) is
+    a string containing error message, or 'OK' if status is 200. Third
+    element (result) is optional, the actual result. Fourth element (meta)
+    is called result metadata and is optional, a hash that contains extra
+    information.
+
+     (any)
+
+SEE ALSO
+    list-id-provinces
+
+    Gudang Data Interim project,
+    https://github.com/sharyanto/gudang-data-interim/
+
+    This API will also be available on GudangAPI, http://gudangapi.com/
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Locale-ID-Province>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-Locale-ID-Province>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Locale-ID-Province>
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
 
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2012 by Steven Haryanto.
+    This software is copyright (c) 2014 by Steven Haryanto.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
