@@ -1,7 +1,7 @@
 package Locale::ID::SubCountry;
 use Locale::ID::Province;
 
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 our @ISA       = @Locale::ID::Province::ISA;
 our @EXPORT    = @Locale::ID::Province::EXPORT;
@@ -26,7 +26,7 @@ Locale::ID::SubCountry - Alias for Locale::ID::Province
 
 =head1 VERSION
 
-This document describes version 0.05 of Locale::ID::SubCountry (from Perl distribution Locale-ID-Province), released on 2014-07-22.
+This document describes version 0.06 of Locale::ID::SubCountry (from Perl distribution Locale-ID-Province), released on 2014-08-16.
 
 =head1 FUNCTIONS
 
